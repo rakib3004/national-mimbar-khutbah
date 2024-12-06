@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-baitul-mukarram',
@@ -7,15 +8,19 @@ import { Component } from '@angular/core';
   templateUrl: './baitul-mukarram.component.html',
   styleUrl: './baitul-mukarram.component.css'
 })
-export class BaitulMukarramComponent {
-/*,
-    {
-        "id": "20e5de2a-ebaf-432c-bab7-781b16b8bd39",
-        "no": 7,
-        "date": "৬ ডিসেম্বর ২০২৪",
-        "title": "৭ম খুতবা",
-        "description": "",
-        "speaker": "মুফতি আব্দুল মালেক হাফিযাহুল্লাহ",
-        "copywriter": "মুহাম্মাদ লুতফেরাব্বী আফনান আযহারী"
-    }*/
+export class BaitulMukarramComponent implements OnInit {
+  data: any[] = [];
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit(): void {
+    this.dataService.getData().subscribe(
+      (response) => {
+        this.data = response;
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
+  }
 }

@@ -6,6 +6,6 @@ import { BaitulMukarramComponent } from '../components/baitul-mukarram/baitul-mu
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'timeline', component: TimelineComponent },
-    { path: 'baitul-mukarram', component: BaitulMukarramComponent },
+    { path: '', component: BaitulMukarramComponent },
 
 ];
