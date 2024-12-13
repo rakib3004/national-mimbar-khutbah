@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Khutba, khutbas} from '../../data/baitul-mukarram';
 @Component({
   selector: 'app-baitul-mukarram',
   standalone: true,
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './baitul-mukarram.component.css'
 })
 export class BaitulMukarramComponent implements OnInit {
-
+  khutbas: Khutba[] = [...khutbas].reverse();;
   ngOnInit(): void {
   }
 }
