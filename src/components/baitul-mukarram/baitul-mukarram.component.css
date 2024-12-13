@@ -110,7 +110,7 @@ ul li .date {
 .container ul li:nth-child(odd) {
 	float: left;
 	clear: right;
-	text-align: right;
+	text-align: left;
 	transform: translateX(-30px);
 }
 ul li:nth-child(odd) .date {
@@ -122,7 +122,7 @@ ul li:nth-child(odd) .date {
 	transform: translateX(30px);
 }
 ul li .heading {
-	font-size: 17px;
+	font-size: 21px;
 	color: rgb(91, 14, 216);
 }
 ul li p {

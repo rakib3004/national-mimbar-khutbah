@@ -4,7 +4,31 @@
         <ul>
             <li *ngFor="let item of khutbas">
                 <h3 class="heading">{{ item.title }}</h3>
-                <p>{{ item.description.substring(0, 40) }} .. .. ..</p>
+                <span class="flex items-center space-x-1">
+                    <img
+                      src="../../assets/speaker.png"
+                      alt="speaker"
+                      class="rounded-full w-8 h-8"
+                    />
+                    <h1 class="font-bold text-lg">{{ item.speaker }}</h1>
+                  </span>
+                  <h2>{{ item.description.substring(0, 320) }} .. .. ..</h2>
+                    <span class="flex items-center space-x-1">
+                        <img
+                          src="../../assets/copywriter.png"
+                          alt="speaker"
+                          class="rounded-full w-6 h-6"
+                        />
+                        <h4>শ্রুতিলেখক: {{ item.copywriter }}</h4>
+                      </span>
+                      <span class="flex items-center space-x-1">
+                        <img
+                          src="../../assets/baitul-mokaram.jpg"
+                          alt="speaker"
+                          class="rounded-full w-6 h-6"
+                        />
+                        <h4>স্থান: বাইতুল মোকারম মসজিদ, ঢাকা </h4>
+                      </span>
                 <a href="#">বিস্তারিত</a>
                 <span class="date">{{ item.date }}</span>
                 <span class="circle"></span>
