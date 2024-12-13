@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Khutba, khutbas} from '../../data/baitul-mukarram';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-baitul-mukarram',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './baitul-mukarram.component.html',
   styleUrl: './baitul-mukarram.component.css'
 })

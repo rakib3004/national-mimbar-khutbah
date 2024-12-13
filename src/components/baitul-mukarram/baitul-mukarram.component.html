@@ -1,16 +1,14 @@
 <div class="main">
     <h3 class="head">জাতীয় মসজিদের মিম্বার থেকে খুতবা</h3>
     <div class="container">
-        <ul >
-            <div *ngFor="let item of khutbas">
-                <li>
-                    <h3 class="heading">{{ item.title }}</h3>
-                    <p>{{ item.description.substring(0, 40) }} .. .. ..</p>
-                    <a href="#">বিস্তারিত</a>
-                    <span class="date">{{ item.date }}</span>
-                    <span class="circle"></span>
-                </li>
-            </div>
+        <ul>
+            <li *ngFor="let item of khutbas">
+                <h3 class="heading">{{ item.title }}</h3>
+                <p>{{ item.description.substring(0, 40) }} .. .. ..</p>
+                <a href="#">বিস্তারিত</a>
+                <span class="date">{{ item.date }}</span>
+                <span class="circle"></span>
+            </li>
         </ul>
     </div>
 </div>
