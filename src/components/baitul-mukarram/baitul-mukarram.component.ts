@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-baitul-mukarram',
@@ -9,18 +8,7 @@ import { DataService } from '../../services/data.service';
   styleUrl: './baitul-mukarram.component.css'
 })
 export class BaitulMukarramComponent implements OnInit {
-  data: any[] = [];
-
-  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getData().subscribe(
-      (response) => {
-        this.data = response;
-      },
-      (error) => {
-        console.error('Error fetching data:', error);
-      }
-    );
   }
 }
