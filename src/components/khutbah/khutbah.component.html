@@ -1,0 +1,36 @@
+<div class="flex flex-col mx-6 my-10 shadow-4 bg-gray-100">
+  <a href="/">
+    <img
+      src="assets/baitul-mokaram.jpg"
+      alt="home page"
+      class="rounded-full w-12 h-12"
+    />
+    <h4 class="font-semibold text-lg">হোম পেইজ</h4>
+  </a>
+</div>
+
+<h1 class="font-bold text-3xl text-center m-6">{{ khutba.title }}</h1>
+<div class="px-10">
+  <p>{{ khutba.description }}</p>
+
+  <span class="flex items-center space-x-1">
+    <img src="assets/speaker.png" alt="speaker" class="rounded-full w-8 h-8" />
+    <h1 class="font-bold text-lg">{{ khutba.speaker }}</h1>
+  </span>
+  <span class="flex items-center space-x-1">
+    <img
+      src="assets/copywriter.png"
+      alt="speaker"
+      class="rounded-full w-8 h-8"
+    />
+    <h4>শ্রুতিলেখক: {{ khutba.copywriter }}</h4>
+  </span>
+  <span class="flex items-center space-x-1">
+    <img
+      src="assets/baitul-mokaram.jpg"
+      alt="speaker"
+      class="rounded-full w-6 h-6"
+    />
+    <h4>স্থান: বাইতুল মোকারম মসজিদ, ঢাকা</h4>
+  </span>
+</div>

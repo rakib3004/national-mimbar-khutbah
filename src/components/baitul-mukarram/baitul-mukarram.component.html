@@ -3,19 +3,19 @@
     <div class="container">
         <ul>
             <li *ngFor="let item of khutbas">
-                <h3 class="heading">{{ item.title }}</h3>
+                <h3 class="text-center font-bold text-xl text-blue-700">{{ item.title }}</h3>
                 <span class="flex items-center space-x-1">
                     <img
-                      src="../../assets/speaker.png"
+                      src="assets/speaker.png"
                       alt="speaker"
                       class="rounded-full w-8 h-8"
                     />
                     <h1 class="font-bold text-lg">{{ item.speaker }}</h1>
                   </span>
-                  <h2>{{ item.description.substring(0, 320) }} .. .. ..</h2>
+                  <h2>{{ item.description.substring(0, 320) }} <a href="khutbahs/{{item.url}}">.. .. ..</a></h2>
                     <span class="flex items-center space-x-1">
                         <img
-                          src="../../assets/copywriter.png"
+                          src="assets/copywriter.png"
                           alt="speaker"
                           class="rounded-full w-6 h-6"
                         />
@@ -23,13 +23,13 @@
                       </span>
                       <span class="flex items-center space-x-1">
                         <img
-                          src="../../assets/baitul-mokaram.jpg"
+                          src="assets/baitul-mokaram.jpg"
                           alt="speaker"
                           class="rounded-full w-6 h-6"
                         />
                         <h4>স্থান: বাইতুল মোকারম মসজিদ, ঢাকা </h4>
                       </span>
-                <a href="#">বিস্তারিত</a>
+                <a href="khutbahs/{{item.url}}"><h1 class="text-lg text-right rounded-md shadow-4">বিস্তারিত</h1></a>
                 <span class="date">{{ item.date }}</span>
                 <span class="circle"></span>
             </li>
